@@ -1,18 +1,53 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
+*.egg
+build/
+dist/
 
-# Other files and folders
-.settings/
+# Virtual environments
+venv/
+.venv/
+env/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Jupyter / Colab
+.ipynb_checkpoints/
+*.ipynb_meta
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Datasets (don't commit raw audio — too large, and ESC-50 is CC BY-NC so don't redistribute it)
+data/
+datasets/
+*.wav
+*.mp3
+*.zip
+!examples/*.wav        # keep a couple of small demo clips if you want
+
+# Model weights / checkpoints (large binary files don't belong in git)
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.tflite
+*.onnx
+checkpoints/
+runs/
+wandb/
+
+# Logs and outputs
+logs/
+*.log
+outputs/
+results/*.csv           # keep small summary CSVs if you want them tracked — comment this line out then
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets (just in case)
+.env
+*.key
